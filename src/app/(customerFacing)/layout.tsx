@@ -3,7 +3,7 @@ import { Nav, NavLink } from '../../components/Nav';
 // see https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
 export const dynamic = 'force-dynamic';
 
-export default function AdminLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -11,10 +11,9 @@ export default function AdminLayout({
   return (
     <>
       <Nav>
-        <NavLink href='/admin'>Dashboard</NavLink>
-        <NavLink href='/admin/products'>Products</NavLink>
-        <NavLink href='/admin/users'>Customers</NavLink>
-        <NavLink href='/admin/orders'>Sales</NavLink>
+        <NavLink href='/'>Home</NavLink>
+        <NavLink href='/products'>Products</NavLink>
+        <NavLink href='/orders'>Orders</NavLink>
       </Nav>
       <div className='container mx-auto my-6 px-4'>{children}</div>
     </>
